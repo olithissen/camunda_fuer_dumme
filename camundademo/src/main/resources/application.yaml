@@ -1,0 +1,25 @@
+spring.application.name: simpleApplication
+spring:
+  datasource:
+    url: jdbc:h2:~/data/camunda.db;MODE=Oracle;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+camunda:
+  bpm:
+    application:
+      isDeleteUponUndeploy: false
+      isScanForProcessDefinitions: false
+      isDeployChangedOnly: true
+      isResumePreviousVersions: true
+      resumePreviousBy: a value
+    job-execution:
+      enabled: true
+    metrics:
+      enabled: false
+      db-reporter-activate: false
+    admin-user:
+      id: kermit
+      password: kermit
+logging:
+  level.org: INFO
+
+
+#camunda.bpm.auto-deployment-enabled: false
